@@ -15,6 +15,17 @@
 
 // Code here
 
+function CarFactory (make, model, properties){
+constructor(make, model)
+this.make = make;
+this.model = model;
+this.properties=properties;
+
+
+
+  
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -33,8 +44,9 @@ function Employee(name, email, hireDate) {
 */
 
 // Code here
+newEmployee = new Employee('Bob','bob@gmail.com','01-02-98');
 
-
+newEmployee('Bob');
 
 ////////// PROBLEM 4 //////////
 
@@ -55,4 +67,15 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 
 // Code here
 
+function Car (make,model,year, moveCar)
+this.make = make;
+this.model = model;
+this.year = year;
+this.move = 0;
 
+this.moveCar = function(){
+  this.move+=10;
+return this.move;
+
+}
+var prius = new Car('Toyota', 'Prius', 2011);
